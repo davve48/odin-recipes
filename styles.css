@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+li{
+    color: white;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: aliceblue;
+    padding: 5px;
+    margin: 10px;
+}
+
+.list{
+    list-style: circle;
+    text-align: left;
+    background-color: brown;
+    outline: 3px solid black;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+}
