@@ -1,34 +1,169 @@
+:root{
+  --background-color: #121212;
+  --overlay-color: #2A2A2A;
+  --accent-color: #2A2436;
+  --bright-fields-color: #383838;
+  --text-color: #E0E0E0;
+  --h1-size: 40px;
+  --h2-size: 35px;  
+  --h3-size: 30px;
+  --p-size: 28px;
+  --h1-weight: 700;
+  --h2-weight: 700;
+  --h3-weight: 700;
+  --p-weight: 400;
+}
+
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-width: 100vw;
   min-height: 100vh;
 }
 
-li{
-    color: white;
+.container {
+  background-color: var(--overlay-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  min-width: 700px;    /* Increased minimum width */
+  max-width: 80%;
+  margin: 5px auto 0 auto;
+  border-radius: 35px;
+  padding: 16px;
 }
 
-h1{
-    font-size: 40px;
-    font-weight: 600;
-    text-decoration: none;
-    background-color: aliceblue;
-    padding: 5px;
-    margin: 10px;
+.nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;           /* Use rem or px for better control */
+  min-width: 0;        /* Allow shrinking */
+  width: 100%;
+  flex-wrap: wrap;     /* Allow items to wrap on small screens */
+  box-sizing: border-box;
 }
 
-.list{
-    list-style: circle;
-    text-align: left;
-    background-color: brown;
-    outline: 3px solid black;
-    margin: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.nav-bar h1{
+  font-size: var(--h1-size);
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-color);
+  margin: 0;
+  text-shadow: #121212 2px 2px 4px;
 }
 
-a{
-    text-decoration: none;
+.nav-bar h1 a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 35px;
+}
+
+.nav-bar p {
+  font-size: var(--p-size);
+  font-weight: var(--p-weight);
+  margin: 0;
+}
+
+.nav-bar p a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 35px;
+  transition: background-color 0.4s;
+}
+.nav-bar p a:hover {
+  background-color: var(--bright-fields-color);
+  text-decoration: none;
+} 
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between input and button */
+  margin-top: 40px; /* Space above the search bar */
+  align-self: center; 
+  max-width: 100%;
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: var(--p-size);
+  border: none;
+  border-radius: 35px;
+  width: 60vw;
+  background-color: var(--bright-fields-color);
+  color: var(--text-color);
+  padding-left: 20px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  font-size: var(--p-size);
+  border: none;
+  border-radius: 35px;
+  background-color: var(--bright-fields-color);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: var(--accent-color);
+}
+
+.quick-catagories {
+  display: flex;
+  gap: 16px; /* Space between category boxes */
+  margin-top: 40px; /* Space above the categories */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  padding-bottom: 10px; /* Add some padding at the bottom */
+  width: 100%;
+  align-items: flex-start;
+  
+
+.quick-catagories h2 {
+  font-size: var(--h2-size);
+  font-weight: var(--h2-weight);
+  margin: 0 0 10px 10px; /* Margin below the heading */
+}
+
+.catagory-buttons {
+  display: flex;
+  gap: 16px; /* Space between buttons */
+  padding-left: 10px; /* Padding to align with heading */
+  ;
+} 
+
+.catagory-buttons button {
+  padding: 10px 20px;
+  font-size: var(--p-size);
+  border: none;
+  border-radius: 35px;
+  background-color: var(--overlay-color);
+  color: var(--text-color);
+  cursor: pointer;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.catagory-buttons button:hover {
+  background-color: var(--bright-fields-color);
+}
+
+.catagory-buttons button a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  width: 100%;
+  margin-top: 32px;
+  box-sizing: border-box;
 }
