@@ -377,3 +377,23 @@ body {
   background: #ff2e00;
   transition: background-color 0,4s;
 }
+
+.footer{
+  margin-top: 32px;
+  padding: 16px 0;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid var(--bright-fields-color);
+}
+
+.footer p {
+  font-size: var(--p-size);
+  font-weight: var(--p-weight);
+  margin: 0;
+}
+
+.footer hr {
+  border: none;
+  border-top: 1px solid var(--bright-fields-color);
+  margin: 16px 0;
+}
